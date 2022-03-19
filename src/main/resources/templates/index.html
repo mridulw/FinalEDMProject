@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Food Delivery Application</title>
+</head>
+<body>
+<div align="center">
+    <h1>Registration Records</h1>
+    <!--<a href="/new">Enter New Sale</a>-->
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Password</th>
+                <th>securityQuestion</th>
+                <th>securityAnswer</th>
+                <!--<th>Actions</th>-->
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="registration : ${listRegistration}">
+                <td th:text="${registration.username}">Username</td>
+                <td th:text="${registration.password}">Password</td>
+                <td th:text="${registration.securityQuestion}">Security Question</td>
+                <td th:text="${registration.securityAnswer}">Security Answer</td>
+                <!--<td>
+                    <a th:href="@{'/edit/' + ${sale.id}}">Edit</a>
+                    &nbsp;&nbsp;&nbsp;
+                    <a th:href="@{'/delete/' + ${sale.id}}">Delete</a>
+                </td>-->
+            </tr>
+        </tbody>
+    </table>
+</div>   
+</body>
+</html>

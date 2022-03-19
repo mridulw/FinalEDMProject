@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Food Delivery Application</title>
+</head>
+<body>
+<div align="center">
+    <h1>Restaurant Names</h1>
+    <!--<a href="/new">Enter New Sale</a>-->
+    <br/><br/>
+    <form action="#" th:action ="@{/menuItems}" th:object="${menuItems}" method="post"> 
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>RestaurantID</th>
+                <th>RestaurantName</th>
+                <th>  </th>
+                <!--<th>Actions</th>-->
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="restaurant : ${listRestaurant}">
+                <td th:text="${restaurant.restaurantID}">RestaurantID</td>
+                <td th:text="${restaurant.restaurantName}">RestaurantName</td>
+                <td><button class="button" type="submit" id="${restaurant.restaurantID}" th:formaction="'http://ec2-52-27-17-218.us-west-2.compute.amazonaws.com:8080/menuItems?restroId='+${restaurant.restaurantID}">View Menu</button>
+                 
+            </tr>
+        </tbody>
+    </table>  
+</form>       
+</div>   
+</body>
+<style> 
+
+
+    button {   
+        background-color: #dcebdc;   
+        width: 100%;  
+         color: rgb(10, 7, 1);   
+         padding: 15px;   
+         margin: 10px 0px;   
+         border: none;   
+         cursor: pointer;   
+          }  
+    </style>
+</html>

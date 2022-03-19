@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Food Delivery Application</title>
+</head>
+<body>
+<div align="center">
+    <h1>Rider Stats</h1>
+    <!--<a href="/new">Enter New Sale</a>-->
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>DELIVERYAGENTID</th>
+                <th>Total_revenue</th>
+                <th>Numberoforders</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="vrstat : ${listVRiderStats}">
+                <td th:text="${vrstat.deliveryAgentId}">DELIVERYAGENTID</td>
+                <td th:text="${vrstat.Total_revenue}">Total_revenue</td>
+                <td th:text="${vrstat.Numberoforders}">Numberoforders</td>              
+            </tr>
+        </tbody>
+    </table>
+</div>   
+</body>
+</html>

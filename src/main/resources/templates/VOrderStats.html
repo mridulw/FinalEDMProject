@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Food Delivery Application</title>
+</head>
+<body>
+<div align="center">
+    <h1>Order Stats</h1>
+    <!--<a href="/new">Enter New Sale</a>-->
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>OrderDate</th>
+                <th>OrdersToday</th>
+                <th>WeekAgo</th>
+                <th>PreviousDay</th>
+                <th>WeeklyChange</th>
+                <th>DailyChange</th>
+                <!--<th>Actions</th>-->
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="vos : ${listVOrderStats}">
+                <td th:text="${vos.OrderDate}">OrderDate</td>
+                <td th:text="${vos.OrdersToday}">OrdersToday</td>
+                <td th:text="${vos.WeekAgo}">WeekAgo</td>
+                <td th:text="${vos.PreviousDay}">PreviousDay</td>
+                <td th:text="${vos.WeeklyChange}">WeeklyChange</td>
+                <td th:text="${vos.DailyChange}">DailyChange</td>
+            </tr>
+        </tbody>
+    </table>
+</div>   
+</body>
+</html>

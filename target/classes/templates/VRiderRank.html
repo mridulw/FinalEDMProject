@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Food Delivery Application</title>
+</head>
+<body>
+<div align="center">
+    <h1>Rider Ranks</h1>
+    <!--<a href="/new">Enter New Sale</a>-->
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>rider</th>
+                <th>totalNumber_of_rides</th>
+                <th>average_rating</th>
+                <th>rider_rank</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="vrr : ${listRiderRank}">
+                <td th:text="${vrr.rider}">rider</td>
+                <td th:text="${vrr.totalNumber_of_rides}">totalNumber_of_rides</td>
+                <td th:text="${vrr.average_rating}">average_rating</td>
+                <td th:text="${vrr.rider_rank}">rider_rank</td>
+            </tr>
+        </tbody>
+    </table>
+</div>   
+</body>
+</html>

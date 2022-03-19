@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Food Delivery Application</title>
+<h1><center>WELCOME TO PAGE WHERE YOU CAN SEE SPECIAL QUERIES</center> </h1>
+</head>
+<body>
+</body>
+<div align = "center"> 
+      <form action="#" th:action ="@{/v_custStats}" th:object="${vcs}" method="post">
+            <button type="submit" class= "button" style="height: 50px;width:180px">View Customer Stats</button>
+            </form>
+</div> 
+<br>
+<br>
+
+<div align = "center"> 
+      <form action="#" th:action ="@{/v_popularRestaurants}" th:object="${vpr}" method="post">
+            <button type="submit" class= "button" style="height: 50px;width:180px">View Popular restaurants</button>
+            </form>
+</div> 
+<br>
+<br>
+
+<div align = "center"> 
+      <form action="#" th:action ="@{/v_itemTypes}" th:object="${vit}" method="post">
+            <button type="submit" class= "button" style="height: 50px;width:180px">View Item Types</button>
+            </form>
+</div> 
+<br>
+<br>
+
+<div align = "center"> 
+      <form action="#" th:action ="@{/v_cusRestOrders}" th:object="${vcro}" method="post">
+            <button type="submit" class= "button" style="height: 80px;width:180px">Customers Total Orders Placed from a Restaurant</button>
+            </form>
+</div> 
+<br>
+<br>
+
+<div align = "center"> 
+      <form action="#" th:action ="@{/v_restLastOrderDate}" th:object="${vrlod}" method="post">
+            <button type="submit" class= "button" style="height: 50px;width:180px">Restaurant's Last Order Date</button>
+            </form>
+</div> 
+<br>
+<br>
+
+<div align = "center"> 
+      <form action="#" th:action ="@{/v_RiderStats}" th:object="${vrstat}" method="post">
+            <button type="submit" class= "button" style="height: 50px;width:180px">View Rider Stats</button>
+            </form>
+</div> 
+<br>
+<br>
+
+<div align = "center"> 
+      <form action="#" th:action ="@{/v_RestaurantCategory}" th:object="${vrc}" method="post">
+            <button type="submit" class= "button" style="height: 50px;width:180px">View Restaurant Category</button>
+            </form>
+</div> 
+<br>
+<br>
+
+<div align = "center"> 
+      <form action="#" th:action ="@{/v_OrderStats}" th:object="${vos}" method="post">
+            <button type="submit" class= "button" style="height: 50px;width:180px">View Order Stats</button>
+            </form>
+</div> 
+<br>
+<br>
+
+<div align = "center"> 
+      <form action="#" th:action ="@{/v_mostOrderedItems}" th:object="${vmoi}" method="post">
+            <button type="submit" class= "button" style="height: 50px;width:180px">View Most Ordered Items</button>
+            </form>
+</div> 
+<br>
+<br>
+
+<div align = "center"> 
+      <form action="#" th:action ="@{/v_riderRank}" th:object="${vcs}" method="post">
+            <button type="submit" class= "button" style="height: 50px;width:180px">View Rider Ranks</button>
+            </form>
+</div> 
+<br>
+<br>
+
+
+<div align = "center"> 
+      <form action="#" th:action ="@{/v_quarterRevenue}" th:object="${vqr}" method="post">
+            <button type="submit" class= "button" style="height: 50px;width:180px">View Quarter wise Revenue</button>
+            </form>
+</div> 
+<br>
+<br>
+
+<div align = "center"> 
+      <form action="#" th:action ="@{/v_deptStats}" th:object="${vds}" method="post">
+            <button type="submit" class= "button" style="height: 50px;width:180px">Department Statistics</button>
+            </form>
+</div> 
+<br>
+<br>
+
+<style> 
+button {   
+    background-color: #dcebdc;   
+    width: 100%;  
+     color: rgb(10, 7, 1);   
+     padding: 15px;   
+     margin: 10px 0px;   
+     border: none;   
+     cursor: pointer;   
+      }  
+</style>
+</html>

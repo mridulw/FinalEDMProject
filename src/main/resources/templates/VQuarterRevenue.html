@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Food Delivery Application</title>
+</head>
+<body>
+<div align="center">
+    <h1>Quarter Wise Revenue</h1>
+    <!--<a href="/new">Enter New Sale</a>-->
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>quarters</th>
+                <th>sales_r001</th>
+                <th>sales_r002</th>
+                <th>sales_r003</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="vqr : ${listQuarterRevenue}">
+                <td th:text="${vqr.quarters}">quarters</td>
+                <td th:text="${vqr.sales_r001}">sales_r001</td>
+                <td th:text="${vqr.sales_r002}">sales_r002</td>
+                <td th:text="${vqr.sales_r003}">sales_r003</td>
+            </tr>
+        </tbody>
+    </table>
+</div>   
+</body>
+</html>

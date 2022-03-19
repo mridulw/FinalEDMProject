@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Food Delivery Application</title>
+</head>
+<body>
+<div align="center">
+    <h1>Menu items</h1>
+    <!--<a href="/new">Enter New Sale</a>-->
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>ItemName</th>
+                <th>ItemPrice</th>
+                <th>ItemDescription</th>
+                <th>RestaurantID</th>
+                <!--<th>Actions</th>-->
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="menuitems : ${listMenuitems}">
+                <td th:text="${menuitems.itemName}">ItemName</td>
+                <td th:text="${menuitems.itemPrice}">ItemPrice</td>
+                <td th:text="${menuitems.itemDescription}">ItemDescription</td>
+                <td th:text="${menuitems.restaurantID}">RestaurantID</td>
+            </tr>
+        </tbody>
+    </table>
+</div>   
+</body>
+</html>

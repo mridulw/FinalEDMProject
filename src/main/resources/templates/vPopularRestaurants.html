@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Food Delivery Application</title>
+</head>
+<body>
+<div align="center">
+    <h1>Popular restaurants</h1>
+    <!--<a href="/new">Enter New Sale</a>-->
+    <br/><br/>
+    <table border="1" cellpadding="10">
+        <thead>
+            <tr>
+                <th>RESTAURANTID</th>
+                <th>REVENUE</th>
+                <th>POPULARITY</th>
+
+                <!--<th>Actions</th>-->
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="vpr : ${listPopRes}">
+                <td th:text="${vpr.restaurantId}">RESTAURANTID</td>
+                <td th:text="${vpr.revenue}">REVENUE</td>
+                <td th:text="${vpr.popularity}">POPULARITY</td>
+            </tr>
+        </tbody>
+    </table>
+</div>   
+</body>
+</html>

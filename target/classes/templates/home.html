@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Food Delivery Application</title>
+<h1><center>WELCOME TO TUCSON FOODS</center> </h1>
+</head>
+<body>
+</body>
+<div align = "center"> 
+      <form action="#" th:action ="@{/restaurants}" th:object="${restaurant}" method="post">
+
+            LoginId : <input type="text" style="height:30px;width:150px" name="loginID"><br> <br>
+            Password: <input type="password" style="height:30px;width:150px" name="password"><br><br>
+            <button type="submit" class= "button" style="height:50px;width:80px">Login</button>
+            <!-- <input  style="height:50px;width:80px" type="submit" value="login"> -->
+            
+            </form>
+</div> 
+<br>
+<br>
+  <br>
+  <br>
+  <br>    
+<div align = "center">  
+      <form action="#" th:action ="@{/signup}" th:object="${registration}" method="post">
+      <h2>New Customer? Please Register</h2>
+<button type="submit" class= "button" style="height:50px;width:80px">Register</button>
+</div>
+</form>
+
+<br>
+  <br>
+  <br> 
+<div align = "center" > 
+      <h2>Special Stats Here</h2>
+      <form action="#">
+      <button type="submit" class= "button" style="height:50px;width:80px" th:formaction="'http://ec2-52-27-17-218.us-west-2.compute.amazonaws.com:8080/AdminLogin'">View Stats</button>
+</form>
+</div>
+<style> 
+
+
+button {   
+    background-color: #dcebdc;   
+    width: 100%;  
+     color: rgb(10, 7, 1);   
+     padding: 15px;   
+     margin: 10px 0px;   
+     border: none;   
+     cursor: pointer;   
+      }  
+</style>
+</html>
